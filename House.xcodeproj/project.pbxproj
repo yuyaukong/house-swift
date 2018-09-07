@@ -114,6 +114,11 @@
 		49061A6E213E6D840066EB7B /* House */ = {
 			isa = PBXGroup;
 			children = (
+				49E68AD12142DA100088FC26 /* Models */,
+				49E68AD02142DA090088FC26 /* View Models */,
+				49E68ACF2142DA040088FC26 /* Views */,
+				49E68ACE2142D9FB0088FC26 /* View Controllers */,
+				49E68ACD2142D9F20088FC26 /* Manager */,
 				49061A6F213E6D840066EB7B /* AppDelegate.swift */,
 				49061A71213E6D840066EB7B /* ViewController.swift */,
 				49061A73213E6D840066EB7B /* Main.storyboard */,
@@ -140,6 +145,41 @@
 				49061A91213E6D870066EB7B /* Info.plist */,
 			);
 			path = HouseUITests;
+			sourceTree = "<group>";
+		};
+		49E68ACD2142D9F20088FC26 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		49E68ACE2142D9FB0088FC26 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		49E68ACF2142DA040088FC26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49E68AD02142DA090088FC26 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		49E68AD12142DA100088FC26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		86825E3AC730DE99699574F0 /* Pods */ = {
@@ -301,15 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-House-checkManifestLockResult.txt",
 			);
@@ -322,8 +358,6 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-House/Pods-House-frameworks.sh",
@@ -340,8 +374,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
@@ -365,15 +397,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HouseUITests-checkManifestLockResult.txt",
 			);
@@ -387,15 +415,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HouseTests-checkManifestLockResult.txt",
 			);
