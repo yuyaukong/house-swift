@@ -33,6 +33,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Ke0-u6-b7x"/>
+                    <connections>
+                        <segue destination="GEN-mJ-pE0" kind="show" identifier="showFixtureVC" id="S4S-Ox-m5T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEf-zm-cES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,6 +56,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZa-0H-rRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-116" y="611"/>
+        </scene>
+        <!--Fixture View Controller-->
+        <scene sceneID="fC5-dm-443">
+            <objects>
+                <tableViewController id="GEN-mJ-pE0" userLabel="Fixture View Controller" customClass="FixtureViewController" customModule="House" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EmT-vE-a1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3J4-ZY-B27">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3J4-ZY-B27" id="HZs-nJ-qXZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GEN-mJ-pE0" id="ybQ-xX-0wf"/>
+                            <outlet property="delegate" destination="GEN-mJ-pE0" id="sT3-UD-hXz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fixture" id="I40-lc-Nie"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4Y-Uu-MT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="610"/>
         </scene>
     </scenes>
 </document>
