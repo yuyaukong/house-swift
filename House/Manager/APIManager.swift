@@ -34,8 +34,16 @@ class APIManager {
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]
-
+        
         return self.rx_get(url: "\(Host.apiBaseUrl)/\(room)/\(fixture)/\(status)", parameters: nil, headers: headers)
+    }
+
+    func getWeather() ->Observable<Data> {
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        
+        return self.rx_get(url: "\(Host.weatherAPIBaseUrl)", parameters: nil, headers: headers)
     }
 
     private func rx_get(url:URLConvertible, parameters:Parameters?, headers:HTTPHeaders?) -> Observable<Data> {
