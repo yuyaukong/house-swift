@@ -26,20 +26,10 @@ class HomeViewController: UITableViewController {
         self.tableView.tableFooterView = UIView.init()
         
         //update UI if roomsCollection change
-        self.vm.roomsCollection
-            .asObservable()
-            .filter({ str -> Bool in
-                return str.isEmpty
-            })
+        self.vm.roomsCollection.asObservable()
             .subscribe(onNext: { roomsCollection in
                 self.tableView.reloadData()
-            }).disposed(by: disposeBag)
-        
-        //update network information
-        self.vm.getAllRooms()
-        
-        //update error ui
-        
+            }).disposed(by: disposeBag)        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,8 +45,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let json = JSON(parseJSON: self.vm.roomsCollection.value)
-        return json["rooms"].dictionaryValue.count
+        return self.vm.roomsCollection.value["rooms"].dictionaryValue.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,37 +55,8 @@ class HomeViewController: UITableViewController {
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
-        let json = JSON(parseJSON: self.vm.roomsCollection.value)
-        cell.titleLabel.text = Array(json["rooms"].dictionaryValue.keys)[indexPath.row]
+        cell.titleLabel.text = Array(self.vm.roomsCollection.value["rooms"].dictionaryValue.keys)[indexPath.row]
         return cell
-    }
-    
-    // MARK: UITableViewDelegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showFixtureVC", sender: indexPath.row)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showFixtureVC" {
-            guard let vc = segue.destination as? FixtureViewController,
-                let row = sender as? Int else {
-                    return
-            }
-            
-            let json = JSON(parseJSON: self.vm.roomsCollection.value)
-            let jsonObject = Array(json["rooms"].dictionaryValue)[row]
-            vc.vm.title = jsonObject.key
-            
-            jsonObject.value["fixtures"].arrayValue.forEach { fixture in
-                let fixtureProperties = FixtureProperties()
-                fixtureProperties.room = vc.vm.title
-                fixtureProperties.fixture = fixture.stringValue
-                fixtureProperties.key = "\(vc.vm.title)\(fixture.stringValue)"
-                fixtureProperties.status = false
-                vc.vm.fixturesCollection.value.append(fixtureProperties)
-            }
-        }
     }
 
 }
