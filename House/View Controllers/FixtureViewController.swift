@@ -30,14 +30,14 @@ class FixtureViewController: UITableViewController {
         self.title = self.vm.title
         
         let array = self.vm.fetch(room: self.vm.title)
-        self.vm.fixturesCollection.value = self.vm.fixturesCollection.value.map { fixtureProperties -> FixtureProperties in
+        self.vm.fixturesCollection.value = self.vm.fixturesCollection.value.map { currentFixture -> FixtureProperties in
             let data = array.filter({ object -> Bool in
-                object.fixture.elementsEqual(fixtureProperties.fixture)
+                object.fixture.elementsEqual(currentFixture.fixture)
             })
             if data.count > 0 {
-                fixtureProperties.status = data.first?.status ?? false
+                currentFixture.status = data.first?.status ?? false
             }
-            return fixtureProperties
+            return currentFixture
         }
     }
     

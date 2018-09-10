@@ -58,5 +58,32 @@ class HomeViewController: UITableViewController {
         cell.titleLabel.text = Array(self.vm.roomsCollection.value["rooms"].dictionaryValue.keys)[indexPath.row]
         return cell
     }
+    
+    // MARK: UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showFixtureVC", sender: indexPath.row)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFixtureVC" {
+            guard let vc = segue.destination as? FixtureViewController,
+                let row = sender as? Int else {
+                    return
+            }
+            
+            let jsonObject = Array(self.vm.roomsCollection.value["rooms"].dictionaryValue)[row]
+            vc.vm.title = jsonObject.key
+            
+            jsonObject.value["fixtures"].arrayValue.forEach { fixture in
+                let fixtureProperties = FixtureProperties()
+                fixtureProperties.room = vc.vm.title
+                fixtureProperties.fixture = fixture.stringValue
+                fixtureProperties.key = "\(vc.vm.title)\(fixture.stringValue)"
+                fixtureProperties.status = false
+                vc.vm.fixturesCollection.value.append(fixtureProperties)
+            }
+        }
+    }
 
 }

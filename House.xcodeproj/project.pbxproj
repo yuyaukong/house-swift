@@ -11,13 +11,14 @@
 		49061A72213E6D840066EB7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49061A71213E6D840066EB7B /* ViewController.swift */; };
 		49061A77213E6D860066EB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49061A76213E6D860066EB7B /* Assets.xcassets */; };
 		49061A7A213E6D860066EB7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49061A78213E6D860066EB7B /* LaunchScreen.storyboard */; };
-		49061A85213E6D870066EB7B /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49061A84213E6D870066EB7B /* HouseTests.swift */; };
+		49061A85213E6D870066EB7B /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49061A84213E6D870066EB7B /* HomeTests.swift */; };
 		49061A90213E6D870066EB7B /* HouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49061A8F213E6D870066EB7B /* HouseUITests.swift */; };
 		49C423E52142E96C003D2756 /* FixtureProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C423E42142E96C003D2756 /* FixtureProperties.swift */; };
 		49C423E72142E99F003D2756 /* FixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C423E62142E99F003D2756 /* FixtureViewController.swift */; };
 		49C423EA2142E9AD003D2756 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C423E82142E9AD003D2756 /* StatusTableViewCell.swift */; };
 		49C423EB2142E9AD003D2756 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C423E92142E9AD003D2756 /* StatusTableViewCell.xib */; };
 		49C423ED2142EA1E003D2756 /* FixtureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C423EC2142EA1E003D2756 /* FixtureViewModel.swift */; };
+		49D84F1E2145A21E001E1F30 /* FixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D84F1D2145A21E001E1F30 /* FixtureTests.swift */; };
 		49E68AD92142DB270088FC26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E68AD82142DB270088FC26 /* Info.plist */; };
 		49E68ADB2142DB640088FC26 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E68ADA2142DB640088FC26 /* Config.swift */; };
 		49E68AE02142E1B50088FC26 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E68ADE2142E1B50088FC26 /* CardTableViewCell.xib */; };
@@ -60,7 +61,7 @@
 		49061A76213E6D860066EB7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49061A79213E6D860066EB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49061A80213E6D870066EB7B /* HouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49061A84213E6D870066EB7B /* HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
+		49061A84213E6D870066EB7B /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		49061A86213E6D870066EB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49061A8B213E6D870066EB7B /* HouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49061A8F213E6D870066EB7B /* HouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseUITests.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		49C423E82142E9AD003D2756 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		49C423E92142E9AD003D2756 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		49C423EC2142EA1E003D2756 /* FixtureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureViewModel.swift; sourceTree = "<group>"; };
+		49D84F1D2145A21E001E1F30 /* FixtureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureTests.swift; sourceTree = "<group>"; };
 		49E68AD82142DB270088FC26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E68ADA2142DB640088FC26 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		49E68ADE2142E1B50088FC26 /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
@@ -158,7 +160,8 @@
 		49061A83213E6D870066EB7B /* HouseTests */ = {
 			isa = PBXGroup;
 			children = (
-				49061A84213E6D870066EB7B /* HouseTests.swift */,
+				49061A84213E6D870066EB7B /* HomeTests.swift */,
+				49D84F1D2145A21E001E1F30 /* FixtureTests.swift */,
 				49061A86213E6D870066EB7B /* Info.plist */,
 			);
 			path = HouseTests;
@@ -494,7 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49061A85213E6D870066EB7B /* HouseTests.swift in Sources */,
+				49061A85213E6D870066EB7B /* HomeTests.swift in Sources */,
+				49D84F1E2145A21E001E1F30 /* FixtureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

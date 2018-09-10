@@ -16,19 +16,17 @@ class FixtureViewModel {
     var fixturesCollection: Variable<[FixtureProperties]> = Variable([])
 
     func changeFixtureStatus(row: Int) {
-//        APIManager.sharedManager.changeFixtureStatus(room: <#T##String#>, fixture: <#T##String#>, status: <#T##FixtureStatus#>)
-//            .subscribe(onNext: { str in
-//                self.roomsCollection.value = str
-//            }).disposed(by: self.disposeBag)
-
-        let fixtureProperties = self.fixturesCollection.value[row]
-        self.fixturesCollection.value = self.fixturesCollection.value.map({ fixtureObject -> FixtureProperties in
-            if fixtureObject.room == fixtureProperties.room && fixtureObject.fixture == fixtureProperties.fixture {
-                fixtureObject.status = !fixtureObject.status
-                self.update(fixtureProperties: fixtureProperties)
-            }
-            return fixtureObject
-        })
+        let selectedFixture = self.fixturesCollection.value[row]
+        var status = FixtureStatus.on
+        if selectedFixture.status {
+            selectedFixture.status = !selectedFixture.status
+            status = FixtureStatus.off
+        }
+        
+        APIManager.sharedManager.changeFixtureStatus(room: selectedFixture.room, fixture: selectedFixture.fixture, status: status)
+            .subscribe({ str in
+                self.update(fixtureProperties: selectedFixture)
+            }).disposed(by: self.disposeBag)
     }
     
     func fetch(room: String) -> [FixtureProperties] {
@@ -45,7 +43,6 @@ class FixtureViewModel {
         let realm = try? Realm()
         
         try? realm?.write {
-//            realm?.add(fixtureProperties, update: true)
             realm?.add(fixtureProperties.unmanagedClone(), update: true)
         }
     }

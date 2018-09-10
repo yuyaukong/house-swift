@@ -1,15 +1,15 @@
 //
-//  HouseTests.swift
+//  FixtureTests.swift
 //  HouseTests
 //
-//  Created by andrew on 4/9/2018.
+//  Created by andrew on 10/9/2018.
 //  Copyright © 2018年 andrew. All rights reserved.
 //
 
 import XCTest
 @testable import House
 
-class HouseTests: XCTestCase {
+class FixtureTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,11 +21,13 @@ class HouseTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCase1() {
+        let fixtureVM = FixtureViewModel()
+        //        userProfileEditVM.me.value["firstName"] = JSON("Test")
+        //        userProfileEditVM.me.value["lastName"] = JSON("User")
+        //        XCTAssertNotNil(try! userProfileEditVM.updateMe().toBlocking(timeout: TestsConstant.timeOut).single(), "Update Name Fail")
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
