@@ -9,9 +9,6 @@
 import UIKit
 
 struct Host{
-    #if DEBUG
-    static var apiBaseUrl:String = Bundle.main.infoDictionary?["APIHost"] as? String ?? "" // No staging env for this yet
-    #else
-    static var apiBaseUrl:String = Bundle.main.infoDictionary?["APIHost"] as? String ?? ""
-    #endif
+    static var apiBaseUrl:String = "https://private-1e863-house4591.apiary-mock.com"
+    static var weatherAPIBaseUrl:String = "https://www.metaweather.com/api/location/2165352/"
 }
